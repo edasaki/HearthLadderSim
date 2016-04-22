@@ -1,142 +1,310 @@
 There have been several posts on win rates and stars and game times recently, so I thought I'd run some simulations of my own for fun.
 
+The goal of this was to see if there are actually any "strategies" in terms of which deck to play if you just want to climb to legend the fastest.
+
 The simulation I made takes into account win streaks, stars required for each rank, and no win streaks after rank 5, so I believe I covered all the relevant ladder mechanics.
 
 **The code**
+
 I posted the code in a repo here: https://github.com/edasaki/HearthLadderSim
 
 The code itself is somewhat messy, but the core of it is reading in Strategies and simulating them. Creating a new Strategy is pretty straightforward and if you know a bit of Java you can easily run your own simulations.
 
 Anyways, here are the results!
 
-Simulated 1000000 Rank 20 -> Legend runs.
-**Strategy: FAST - 52% win rate with 5 minute matches. Aggro face decks. Face Hunter, Face Paladin**
-**Averages: 763.501625 games. 63 hours & 37 minutes.**
-Average longest  win streak: 9.353785
-Average longest lose streak: -8.218767
-Average # games at rank 5 or better: 371.249748
-Average # games at ranks worse than 5: 392.251877
-Average % of games at rank 5 or better: 0.4862461792402865
 
-Simulated 1000000 Rank 20 -> Legend runs.
-**Strategy: MEDIUM - 55% win rate with 7 minute matches. Mid-range decks. Examples: Midrange Druid, Secret Paladin**
-**Averages: 450.329096 games. 52 hours & 32 minutes.**
-Average longest  win streak: 9.315695
-Average longest lose streak: -6.980698
-Average # games at rank 5 or better: 207.328901
-Average # games at ranks worse than 5: 243.000195
-Average % of games at rank 5 or better: 0.4603941935832634
 
-Simulated 1000000 Rank 20 -> Legend runs.
-**Strategy: BAD_SLOW - 55% win rate with 10 minute matches. Slow control decks. Win-rate equivalent to MEDIUM decks. Examples: Control Warrior, Dragon Priest**
-**Averages: 450.476299 games. 75 hours & 4 minutes.**
-Average longest  win streak: 9.316958
-Average longest lose streak: -6.981333
-Average # games at rank 5 or better: 207.547702
-Average # games at ranks worse than 5: 242.928597
-Average % of games at rank 5 or better: 0.4607294600420254
+> Simulated 1000000 Rank 20 -> Legend runs.
+> 
+> **Strategy: FAST - 52% win rate with 5 minute matches. Aggro face decks. Face Hunter, Face Paladin**
+> 
+> **Averages: 763.501625 games. 63 hours & 37 minutes.**
+> 
+> Average longest  win streak: 9.353785
+> 
+> Average longest lose streak: -8.218767
+> 
+> Average # games at rank 5 or better: 371.249748
+> 
+> Average # games at ranks worse than 5: 392.251877
+> 
+> Average % of games at rank 5 or better: 0.4862461792402865
 
-Simulated 1000000 Rank 20 -> Legend runs.
-**Strategy: SLOW - 62% win rate with 10 minute matches. Slow control decks. Played well enough to maintain a high win rate. Examples: Control Warrior, Dragon Priest**
-**Averages: 228.845361 games. 38 hours & 8 minutes.**
-Average longest  win streak: 10.025506
-Average longest lose streak: -5.144127
-Average # games at rank 5 or better: 97.950262
-Average # games at ranks worse than 5: 130.895099
-Average % of games at rank 5 or better: 0.42801943448615504
+.
 
-Simulated 1000000 Rank 20 -> Legend runs.
-**Strategy: MY_PATRON - My own 58% win rate on Patron (19-14) with an average of 7 minute matches.**
-**Averages: 319.028525 games. 37 hours & 13 minutes.**
-Average longest  win streak: 9.519216
-Average longest lose streak: -6.080686
-Average # games at rank 5 or better: 140.914999
-Average # games at ranks worse than 5: 178.113526
-Average % of games at rank 5 or better: 0.4417003119078458
+> Simulated 1000000 Rank 20 -> Legend runs.
+> 
+> **Strategy: MEDIUM - 55% win rate with 7 minute matches. Mid-range decks. Examples: Midrange Druid, Secret Paladin**
+> 
+> **Averages: 450.329096 games. 52 hours & 32 minutes.**
+> 
+> Average longest  win streak: 9.315695
+> 
+> Average longest lose streak: -6.980698
+> 
+> Average # games at rank 5 or better: 207.328901
+> 
+> Average # games at ranks worse than 5: 243.000195
+> 
+> Average % of games at rank 5 or better: 0.4603941935832634
 
-Simulated 1000000 Rank 20 -> Legend runs.
-**Strategy: MY_FLOOD_PALLY - My own 71% win rate on Flood Pally (30-12) with an average of 6 minute matches.**
-**Averages: 138.069236 games. 16 hours & 6 minutes.**
-Average longest  win streak: 11.922212
-Average longest lose streak: -3.634319
-Average # games at rank 5 or better: 57.731491
-Average # games at ranks worse than 5: 80.337745
-Average % of games at rank 5 or better: 0.4181343554330959
+.
 
-Simulated 1000000 Rank 20 -> Legend runs.
-**Strategy: MY_FACE_HUNTER - My own 57% win rate on Face Hunter (41-31) with an average of 5 minute matches.**
-**Averages: 353.254274 games. 29 hours & 26 minutes.**
-Average longest  win streak: 9.432774
-Average longest lose streak: -6.353623
-Average # games at rank 5 or better: 157.924318
-Average # games at ranks worse than 5: 195.329956
-Average % of games at rank 5 or better: 0.44705564694738836
+> Simulated 1000000 Rank 20 -> Legend runs.
+> 
+> **Strategy: EQUAL_SLOW1 - 56% win rate, time similar to rurning a FAST (52% 5 minute) deck. Slow control decks. Win-rate equivalent to MEDIUM decks. Examples: Control Warrior, Dragon Priest**
+> 
+> **Averages: 395.779313 games. 65 hours & 57 minutes.**
+> 
+> Average longest  win streak: 9.361412
+> 
+> Average longest lose streak: -6.651751
+> 
+> Average # games at rank 5 or better: 179.411299
+> 
+> Average # games at ranks worse than 5: 216.368014
+> 
+> Average % of games at rank 5 or better: 0.45331146198639244
 
-Simulated 1000000 Rank 20 -> Legend runs.
-**Strategy: MY_MURLOC_PALLY - My own 47% win rate on Anyfin Paladin (26-29) with an average of 8 minute matches.**
-**Averages: 8407.375531 games. 1120 hours & 59 minutes.**
-Average longest  win streak: 11.015037
-Average longest lose streak: -12.775286
-Average # games at rank 5 or better: 2498.075172
-Average # games at ranks worse than 5: 5909.300359
-Average % of games at rank 5 or better: 0.2971290104490992
+.
 
-Simulated 1000000 Rank 20 -> Legend runs.
-**Strategy: MY_MILL_ROGUE - My own 50% win rate on Mill Rogue (19-19) with an average of 9 minute matches.**
-**Averages: 1369.908789 games. 205 hours & 29 minutes.**
-Average longest  win streak: 9.637523
-Average longest lose streak: -9.419148
-Average # games at rank 5 or better: 664.803588
-Average # games at ranks worse than 5: 705.105201
-Average % of games at rank 5 or better: 0.48529040279045904
+> Simulated 1000000 Rank 20 -> Legend runs.
+> 
+> **Strategy: EQUAL_SLOW2 - 57% win rate, time similar to rurning a FAST (52% 5 minute) deck. Slow control decks. Win-rate equivalent to MEDIUM decks. Examples: Control Warrior, Dragon Priest**
+> 
+> **Averages: 353.2362 games. 58 hours & 52 minutes.**
+> 
+> Average longest  win streak: 9.435238
+> 
+> Average longest lose streak: -6.352681
+> 
+> Average # games at rank 5 or better: 157.923775
+> 
+> Average # games at ranks worse than 5: 195.312425
+> 
+> Average % of games at rank 5 or better: 0.4470769841822554
 
-Simulated 1000000 Rank 20 -> Legend runs.
-**Strategy: SWITCH_STRATEGY_1 - Play FAST decks until 2 wins in a row, then play SLOW to attempt to get a longer winstreak. Won't ever play SLOW in legend.**
-**Averages: 674.991825 games. 59 hours & 50 minutes.**
-Average longest  win streak: 10.254662
-Average longest lose streak: -8.004734
-Average # games at rank 5 or better: 370.577981
-Average # games at ranks worse than 5: 304.413844
-Average % of games at rank 5 or better: 0.549011065430311
+.
 
-Simulated 1000000 Rank 20 -> Legend runs.
-**Strategy: SWITCH_STRATEGY_2 - Play FAST decks until 2 wins in a row, then play BAD_SLOW to attempt to get a longer winstreak. Won't ever play BAD_SLOW in legend.**
-**Averages: 735.320839 games. 65 hours & 8 minutes.**
-Average longest  win streak: 9.571905
-Average longest lose streak: -8.150845
-Average # games at rank 5 or better: 371.257774
-Average # games at ranks worse than 5: 364.063065
-Average % of games at rank 5 or better: 0.5048922243314798
+> Simulated 1000000 Rank 20 -> Legend runs.
+> 
+> **Strategy: BAD_SLOW - 55% win rate with 10 minute matches. Slow control decks. Win-rate equivalent to MEDIUM decks. Examples: Control Warrior, Dragon Priest**
+> 
+> **Averages: 450.476299 games. 75 hours & 4 minutes.**
+> 
+> Average longest  win streak: 9.316958
+> 
+> Average longest lose streak: -6.981333
+> 
+> Average # games at rank 5 or better: 207.547702
+> 
+> Average # games at ranks worse than 5: 242.928597
+> 
+> Average % of games at rank 5 or better: 0.4607294600420254
 
-Simulated 1000000 Rank 20 -> Legend runs.
-**Strategy: SWITCH_STRATEGY_3 - Play SLOW decks until 2 wins in a row, then play FAST to attempt to get a longer winstreak. Won't ever play FAST in legend.**
-**Averages: 252.760534 games. 39 hours & 44 minutes.**
-Average longest  win streak: 9.213518
-Average longest lose streak: -5.281855
-Average # games at rank 5 or better: 97.943162
-Average # games at ranks worse than 5: 154.817372
-Average % of games at rank 5 or better: 0.3874938877918338
+.
 
-Simulated 1000000 Rank 20 -> Legend runs.
-**Strategy: CARD_MASTER - 95% win rate with 5 minutes matches. Pls teach me your ways.**
-**Averages: 63.229091 games. 5 hours & 16 minutes.**
-Average longest  win streak: 33.190472
-Average longest lose streak: -1.089878
-Average # games at rank 5 or better: 27.205089
-Average # games at ranks worse than 5: 36.024002
-Average % of games at rank 5 or better: 0.43026221901561107
+> Simulated 1000000 Rank 20 -> Legend runs.
+> 
+> **Strategy: SLOW - 62% win rate with 10 minute matches. Slow control decks. Played well enough to maintain a high win rate. Examples: Control Warrior, Dragon Priest**
+> 
+> **Averages: 228.845361 games. 38 hours & 8 minutes.**
+> 
+> Average longest  win streak: 10.025506
+> 
+> Average longest lose streak: -5.144127
+> 
+> Average # games at rank 5 or better: 97.950262
+> 
+> Average # games at ranks worse than 5: 130.895099
+> 
+> Average % of games at rank 5 or better: 0.42801943448615504
+
+.
+
+> Simulated 1000000 Rank 20 -> Legend runs.
+> 
+> **Strategy: MY_PATRON - My own 58% win rate on Patron (19-14) with an average of 7 minute matches.**
+> 
+> **Averages: 319.028525 games. 37 hours & 13 minutes.**
+> 
+> Average longest  win streak: 9.519216
+> 
+> Average longest lose streak: -6.080686
+> 
+> Average # games at rank 5 or better: 140.914999
+> 
+> Average # games at ranks worse than 5: 178.113526
+> 
+> Average % of games at rank 5 or better: 0.4417003119078458
+
+
+> Simulated 1000000 Rank 20 -> Legend runs.
+> 
+> **Strategy: MY_FLOOD_PALLY - My own 71% win rate on Flood Pally (30-12) with an average of 6 minute matches.**
+> 
+> **Averages: 138.069236 games. 16 hours & 6 minutes.**
+> 
+> Average longest  win streak: 11.922212
+> 
+> Average longest lose streak: -3.634319
+> 
+> Average # games at rank 5 or better: 57.731491
+> 
+> Average # games at ranks worse than 5: 80.337745
+> 
+> Average % of games at rank 5 or better: 0.4181343554330959
+
+.
+
+> Simulated 1000000 Rank 20 -> Legend runs.
+> 
+> **Strategy: MY_FACE_HUNTER - My own 57% win rate on Face Hunter (41-31) with an average of 5 minute matches.**
+> 
+> **Averages: 353.254274 games. 29 hours & 26 minutes.**
+> 
+> Average longest  win streak: 9.432774
+> 
+> Average longest lose streak: -6.353623
+> 
+> Average # games at rank 5 or better: 157.924318
+> 
+> Average # games at ranks worse than 5: 195.329956
+> 
+> Average % of games at rank 5 or better: 0.44705564694738836
+
+.
+
+> Simulated 1000000 Rank 20 -> Legend runs.
+> 
+> **Strategy: MY_MURLOC_PALLY - My own 47% win rate on Anyfin Paladin (26-29) with an average of 8 minute matches.**
+> 
+> **Averages: 8407.375531 games. 1120 hours & 59 minutes.**
+> 
+> Average longest  win streak: 11.015037
+> 
+> Average longest lose streak: -12.775286
+> 
+> Average # games at rank 5 or better: 2498.075172
+> 
+> Average # games at ranks worse than 5: 5909.300359
+> 
+> Average % of games at rank 5 or better: 0.2971290104490992
+
+.
+
+> Simulated 1000000 Rank 20 -> Legend runs.
+> 
+> **Strategy: MY_MILL_ROGUE - My own 50% win rate on Mill Rogue (19-19) with an average of 9 minute matches.**
+> 
+> **Averages: 1369.908789 games. 205 hours & 29 minutes.**
+> 
+> Average longest  win streak: 9.637523
+> 
+> Average longest lose streak: -9.419148
+> 
+> Average # games at rank 5 or better: 664.803588
+> 
+> Average # games at ranks worse than 5: 705.105201
+> 
+> Average % of games at rank 5 or better: 0.48529040279045904
+
+.
+
+> Simulated 1000000 Rank 20 -> Legend runs.
+> 
+> **Strategy: SWITCH_STRATEGY_1 - Play FAST decks until 2 wins in a row, then play SLOW to attempt to get a longer winstreak. Won't ever play SLOW in legend.**
+> 
+> **Averages: 674.991825 games. 59 hours & 50 minutes.**
+> 
+> Average longest  win streak: 10.254662
+> 
+> Average longest lose streak: -8.004734
+> 
+> Average # games at rank 5 or better: 370.577981
+> 
+> Average # games at ranks worse than 5: 304.413844
+> 
+> Average % of games at rank 5 or better: 0.549011065430311
+
+.
+
+> Simulated 1000000 Rank 20 -> Legend runs.
+> 
+> **Strategy: SWITCH_STRATEGY_2 - Play FAST decks until 2 wins in a row, then play BAD_SLOW to attempt to get a longer winstreak. Won't ever play BAD_SLOW in legend.**
+> 
+> **Averages: 735.320839 games. 65 hours & 8 minutes.**
+> 
+> Average longest  win streak: 9.571905
+> 
+> Average longest lose streak: -8.150845
+> 
+> Average # games at rank 5 or better: 371.257774
+> 
+> Average # games at ranks worse than 5: 364.063065
+> 
+> Average % of games at rank 5 or better: 0.5048922243314798
+
+.
+
+> Simulated 1000000 Rank 20 -> Legend runs.
+> 
+> **Strategy: SWITCH_STRATEGY_3 - Play SLOW decks until 2 wins in a row, then play FAST to attempt to get a longer winstreak. Won't ever play FAST in legend.**
+> 
+> **Averages: 252.760534 games. 39 hours & 44 minutes.**
+> 
+> Average longest  win streak: 9.213518
+> 
+> Average longest lose streak: -5.281855
+> 
+> Average # games at rank 5 or better: 97.943162
+> 
+> Average # games at ranks worse than 5: 154.817372
+> 
+> Average % of games at rank 5 or better: 0.3874938877918338
+
+.
+
+> Simulated 1000000 Rank 20 -> Legend runs.
+> 
+> **Strategy: CARD_MASTER - 95% win rate with 5 minutes matches. Pls teach me your ways.**
+> 
+> **Averages: 63.229091 games. 5 hours & 16 minutes.**
+> 
+> Average longest  win streak: 33.190472
+> 
+> Average longest lose streak: -1.089878
+> 
+> Average # games at rank 5 or better: 27.205089
+> 
+> Average # games at ranks worse than 5: 36.024002
+> 
+> Average % of games at rank 5 or better: 0.43026221901561107
+
 
 **Interesting takeaways:**
-To be honest I'm not sure there's a whole lot to take away from this other than some cool numbers.
 
 - Obviously CARD_MASTER was the fastest lmao.
 - I got the idea for this after reading a comment somewhere that mentioned it might be faster to switch up your decks depending on whether or not you're on a win-streak. Interestingly, Strategy 3 appears to be significantly faster than Strategies 1 and 2. However, in reality it seems that Strategy 3 just doesn't get much out of winstreaks because of the lower win rate on them. It's timing is in fact very similar to only playing SLOW decks.
 - The time it takes to reach legend increase dramatically as your win rate decreases towards 50% (or below!). A 47% win rate deck (murloc pally) took a whopping 8400 games over 1120 hours to reach legend, whereas a 50% deck, only a measly 3% better, (mill rogue) took a considerably lower 1370 games over 205 hours (which is still a lot).
-- Interpolating from a comparison of BAD_SLOW, SLOW, MY_FACE_HUNTER, and FAST, it seems that a very slow deck becomes better than a very fast deck if it can hold a win rate about 7% higher. This is probably the biggest deciding factor when choosing which deck to play in a meta. If aggro is weak, it will be better to play a slower control deck even if matches are considerably longer.
+- FAST's time was between EQUAL_SLOW1 and EQUAL_SLOW2. This means that games twice as long (10 minutes instead of 5 minutes) become worth it when you can increase your win rate about 4.5% by playing the slower deck.
 
+**Conclusions:**
 
+To be honest there's nothing super interesting here other than being able to see some more precise numbers. The main problem is that it's impossible to accurately guess a player's win rate with a certain deck. The strategies presented here have very concrete winrates (for example according to this, I should be playing a lot more of my Flood Pally and Face Hunter decks). But, your win rate with a deck will probably fluctate depending on the rank, especially as you enter higher ranks, and even a 100 game sample of your own games isn't enough to accurately determine your actual win rate with a deck.
+
+So, this is really just useful to give you a more concrete way to evaluate what deck you should play.
+
+If you have a somewhat good win rate fast deck, it's the fastest way to legend. After that, slower decks generally need higher winrates to keep up with fast decks. This means that if you play 50 games as Face Hunter and Control Warrior and end up with about equal win rates for both, you'll want to play Face Hunter to legend. In fact, you need a rather high win rate increase for the Control Warrior to be faster - about 4.5%, as mentioned above.
+
+In the end, choosing your optimal climbing deck is all about what kind of winrates you can pull. If you can hold high win rates with a fast deck, it's almost certainly your best ladder climbing deck. Otherwise, if you feel that you can win games about 5% more consistently with a much slower deck, then it's worth it to play the slower deck. I will say that although I didn't test it too much, it may be the case that midrange decks find a good balance between winrate and speed, which would explain why they tend to be popular among high legend players.
+
+**tl;dr just play the fastest deck that you can get a good win rate with, which is kind of obvious but unfortunately the only conclusion that can really be drawn from all this :P**
+
+ I posted this because it was fun to see the numbers on a variety of decks, and because of [this comment](https://www.reddit.com/r/CompetitiveHS/comments/4fndw0/stars_per_hour_below_rank_5_with_win_streaks/d2afya8) which suggested an interesting strategy (that turned out to not be a valid strategy - it's more important to just always play the more consistent deck if it's >5% better than the fast deck, and to only play the fast deck if the consistent deck isn't that much better).
 
 **Important statistical fallacies:**
+
 - This simulation assumes consistent win rates across all ranks. If you're actually capable of playing any of these decks to legend, you're certainly not going to have a measly 50-55% win rate at rank 20. But, that's too intense to code, so I didn't bother taking it into account, and I feel that past rank 15 win rates tend to stabilize a little even for legend players. In general you could expect that someone who can actually reach legend will do so slightly faster than these simulated times (perhaps 10-15% faster).
 - I have no idea what actual win-rates are like, so I tried to include a variety of "strategies" and win rates by including some of my own win rates (I can only reach rank 5 or so each season though).
 - Not so much a fallacy, but I didn't bother tracking when winstreaks tended to stop, which may have been an interesting number to consider.

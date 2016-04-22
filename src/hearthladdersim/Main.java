@@ -35,10 +35,14 @@ public class Main {
         final int testCount = 1000000;
         ArrayList<String> output = new ArrayList<String>();
         output.add("");
-        for (Strategy s : Strategy.values()) {
-            output.addAll(simulate(testCount, s));
-            output.add("");
-        }
+      output.addAll(simulate(testCount, Strategy.EQUAL_SLOW1));
+      output.add("");
+      output.addAll(simulate(testCount, Strategy.EQUAL_SLOW2));
+      output.add("");
+//        for (Strategy s : Strategy.values()) {
+//            output.addAll(simulate(testCount, s));
+//            output.add("");
+//        }
         for (String s : output)
             System.out.println(s);
     }

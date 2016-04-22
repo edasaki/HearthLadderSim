@@ -3,6 +3,8 @@ package hearthladdersim;
 public enum Strategy {
     FAST(0.52, 5, "52% win rate with 5 minute matches. Aggro face decks. Face Hunter, Face Paladin"),
     MEDIUM(0.55, 7, "55% win rate with 7 minute matches. Mid-range decks. Examples: Midrange Druid, Secret Paladin"),
+    EQUAL_SLOW1(0.56, 10, "56% win rate, time similar to rurning a FAST (52% 5 minute) deck. Slow control decks. Win-rate equivalent to MEDIUM decks. Examples: Control Warrior, Dragon Priest"),
+    EQUAL_SLOW2(0.57, 10, "57% win rate, time similar to rurning a FAST (52% 5 minute) deck. Slow control decks. Win-rate equivalent to MEDIUM decks. Examples: Control Warrior, Dragon Priest"),
     BAD_SLOW(0.55, 10, "55% win rate with 10 minute matches. Slow control decks. Win-rate equivalent to MEDIUM decks. Examples: Control Warrior, Dragon Priest"),
     SLOW(0.62, 10, "62% win rate with 10 minute matches. Slow control decks. Played well enough to maintain a high win rate. Examples: Control Warrior, Dragon Priest"),
     MY_PATRON(0.58, 7, "My own 58% win rate on Patron (19-14) with an average of 7 minute matches."),
