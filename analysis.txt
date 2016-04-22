@@ -2,6 +2,11 @@ There have been several posts on win rates and stars and game times recently, so
 
 The simulation I made takes into account win streaks, stars required for each rank, and no win streaks after rank 5, so I believe I covered all the relevant ladder mechanics.
 
+**The code**
+I posted the code in a repo here: https://github.com/edasaki/HearthLadderSim
+
+The code itself is somewhat messy, but the core of it is reading in Strategies and simulating them. Creating a new Strategy is pretty straightforward and if you know a bit of Java you can easily run your own simulations.
+
 Anyways, here are the results!
 
 Simulated 1000000 Rank 20 -> Legend runs.

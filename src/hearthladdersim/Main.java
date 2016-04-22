@@ -1,4 +1,4 @@
-package com.edasaki.hearthladdersim;
+package hearthladdersim;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;

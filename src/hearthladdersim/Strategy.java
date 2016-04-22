@@ -1,4 +1,4 @@
-package com.edasaki.hearthladdersim;
+package hearthladdersim;
 
 public enum Strategy {
     FAST(0.52, 5, "52% win rate with 5 minute matches. Aggro face decks. Face Hunter, Face Paladin"),
